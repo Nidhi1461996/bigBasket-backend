@@ -20,8 +20,9 @@ module.exports = {
           }));
         models.orderDetails.bulkCreate(newItems).then(() => res(items));
       });
+    } else {
+      res({ status: 'ok' });
     }
-
     // const items = req.payload.orderDetails;
     // const merged = [].concat.apply([], items);
     // for (let i = 0; i < merged.length; i += 1) {
